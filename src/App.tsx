@@ -4,7 +4,7 @@ import { HomePage } from "./modules/home-page/HomePage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/games/">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/games/tag" element={<TagGame />} />
