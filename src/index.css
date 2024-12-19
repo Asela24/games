@@ -1,0 +1,13 @@
+:root {
+    --creamy: #EDD2A7;
+    --light-grey: #9FA193;
+    --blue-green: #4B8790;
+    --blue: #2d4865;
+    --dark-blue: #2e294d;
+}
+
+#root, body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}

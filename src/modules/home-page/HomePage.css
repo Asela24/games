@@ -1,0 +1,12 @@
+.home-page-container {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+}
+
+.games-catalog {
+    padding-top: 150px;
+}

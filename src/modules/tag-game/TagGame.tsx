@@ -3,6 +3,7 @@ import "./TagGame.css";
 import { generateSolvablePuzzle } from "./utils/get-start-config";
 import { canMoveItem, getEmptyPosition } from "./utils/movements";
 import { winnerPosition } from "./utils/const";
+import { ReturnButton } from "../../components/BackButton/BackButton";
 
 export const TagGame = () => {
   const [gameState, setGameState] = useState(generateSolvablePuzzle());
@@ -30,24 +31,29 @@ export const TagGame = () => {
   }, [gameState]);
 
   return (
-    <div className="game-field">
-      {gameState.map((row, x) =>
-        row.map((elem, y) => {
-          if (elem === 0) return null;
-          return (
-            <span
-              onClick={() => handleMovement(x, y)}
-              className="game-elem"
-              style={{
-                top: x * 25 + "%",
-                left: y * 25 + "%",
-              }}
-            >
-              {elem}
-            </span>
-          );
-        })
-      )}
+    <div className="page-container">
+      <ReturnButton />
+      <div className="tag-page">
+        <div className="game-field">
+          {gameState.map((row, x) =>
+            row.map((elem, y) => {
+              if (elem === 0) return null;
+              return (
+                <span
+                  onClick={() => handleMovement(x, y)}
+                  className="game-elem"
+                  style={{
+                    top: x * 25 + "%",
+                    left: y * 25 + "%",
+                  }}
+                >
+                  {elem}
+                </span>
+              );
+            })
+          )}
+        </div>
+      </div>
     </div>
   );
 };

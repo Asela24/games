@@ -1,10 +1,33 @@
+.page-container {
+    width: 100%;
+    background-color: var(--light-grey);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
 .game-field {
     position: relative;
     width: 600px;
     height: 600px;
-    background-color: chocolate;
-    display: flex;
-    justify-content: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.game-field::before {
+    display: block;
+    height: 100%;
+    content: "";
+    background-color: var(--blue-green);
+    opacity: 0.4;
+    border-radius: 20px;
 }
 
 .game-elem {
@@ -16,4 +39,10 @@
     margin: 3px;
     box-sizing: content-box;
     cursor: pointer;
+    color: white;
+    font-size: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
