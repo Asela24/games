@@ -1,6 +1,6 @@
 import "./HomePage.css";
-import { GameCard } from "../../components/GameCard/GameCard";
-import { GAMES } from "../../data/games";
+import { ItemCard } from "../../components/ItemCard/ItemCard";
+import { CARDS } from "../../data/cards";
 
 export const HomePage = () => {
   return (
@@ -8,9 +8,11 @@ export const HomePage = () => {
       <div className="games-catalog">
         <h2>Select Game</h2>
 
-        {GAMES.map((game) => (
-          <GameCard {...game} />
-        ))}
+        <div className="cards-container">
+          {CARDS.map((game) => (
+            <ItemCard {...game} />
+          ))}
+        </div>
       </div>
     </div>
   );

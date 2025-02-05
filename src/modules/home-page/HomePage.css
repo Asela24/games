@@ -10,3 +10,8 @@
 .games-catalog {
     padding-top: 150px;
 }
+
+.cards-container {
+    display: flex;
+    gap: 16px;
+}

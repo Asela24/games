@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./GameCard.css";
+import "./ItemCard.css";
 
 type Props = {
   img: string;
@@ -7,7 +7,7 @@ type Props = {
   name: string;
 };
 
-export const GameCard = ({ img, url, name }: Props) => {
+export const ItemCard = ({ img, url, name }: Props) => {
   return (
     <div className="game-card-container">
       <img src={img} className="game-card-img" />
